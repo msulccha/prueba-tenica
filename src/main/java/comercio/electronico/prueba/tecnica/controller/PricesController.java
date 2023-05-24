@@ -19,7 +19,7 @@ public class PricesController {
 
     @PostMapping("/cheking")
     public PriceResponseDTO checkingPrices(@RequestBody PriceRequestDTO priceRequestDTO){
-        log.info("con fe sale");
+
         return this.iPricesService.checkingPrices(priceRequestDTO);
     }
 

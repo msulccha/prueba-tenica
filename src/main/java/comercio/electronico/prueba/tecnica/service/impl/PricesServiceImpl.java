@@ -23,7 +23,6 @@ public class PricesServiceImpl implements IPricesService {
         this.mapperResponse = mapperResponse;
     }
     public PriceResponseDTO checkingPrices(PriceRequestDTO priceRequestDTO){
-        log.info("service");
         PricesEntity pricesEntity = this.pricesRepository.findByBrandIdAndStartDateAndProductId(priceRequestDTO.getBrandId(),priceRequestDTO.getStartDate(), priceRequestDTO.getProductId()).get();
         PriceResponseDTO priceResponseDTO = mapperResponse.map(pricesEntity);
         return priceResponseDTO;
