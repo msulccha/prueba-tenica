@@ -2,9 +2,9 @@ server:
   port: '9091'
 
 spring:
-#  mvc:
-#      pathmatch:
-#          matching-strategy: ant_path_matcher
+  mvc:
+      pathmatch:
+          matching-strategy: ant_path_matcher
   application:
     name: prueba-tecnica
   datasource:
@@ -22,6 +22,5 @@ spring:
     defer-datasource-initialization: true
     hibernate:
       ddl-auto: create-drop
-  springdoc:
-    swagger-ui:
-      path: /doc/swagger-ui.html
+
+#url swagger: http://localhost:9091/swagger-ui/#/

@@ -20,4 +20,5 @@ public class PriceResponseDTO {
     private String product_id;
     private String price_list;
     private String price;
+    private String curr;
 }

@@ -1,10 +1,9 @@
 package comercio.electronico.prueba.tecnica.mapper;
 
 import comercio.electronico.prueba.tecnica.dto.response.PriceResponseDTO;
-import comercio.electronico.prueba.tecnica.persistence.Entity.PricesEntity;
+import comercio.electronico.prueba.tecnica.repository.entity.PricesEntity;
 import org.springframework.stereotype.Component;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Component
@@ -20,6 +19,7 @@ public class PricesToPricesResponseDTO implements Mapper<PricesEntity, PriceResp
                 .end_date(LocalDateTime.now().plusMonths(4))
                 .product_id(in.getProductId())
                 .brand_id(in.getBrandId())
+                .curr(in.getCurr())
                 .build();
 
         return priceResponseDTO;

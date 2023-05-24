@@ -1,17 +1,18 @@
-package comercio.electronico.prueba.tecnica.persistence.Entity;
+package comercio.electronico.prueba.tecnica.repository.entity;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@Builder
 @Table(name = "Prices")
 public class PricesEntity {
     @Id
